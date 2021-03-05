@@ -3,19 +3,20 @@ var numeri = [];
 
 
 //creo ciclo per creare numeri fino a 100
-for (var i = 1; i < 101; i++) {
+for (var i = 1; i <= 100; i++) {
   var numero = i;
-  c = numero % 3;
-  d = numero % 5;
+  a = numero % 3;
+  b = numero % 5;
+  c = a + b;
   if (c == 0){
+    numeri.push('FizzBuzz');
+  } else if (a == 0) {
     numeri.push('Fizz');
- } else if (d == 0) {
+  } else if (b == 0) {
     numeri.push('Buzz');
- } else {
+  } else {
    numeri.push(numero);
- }
-
-
-  // numeri.push(numero);
+  }
 }
 console.log(numeri);
+document.getElementById('lista').innerHTML = numeri;
